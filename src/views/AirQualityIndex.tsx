@@ -53,7 +53,6 @@ const AirQualityIndex = () => {
   const [records, setRecords] = useState([])
 
   const handleChange = (e: React.ChangeEvent<{value: unknown}>) => {
-    console.log(e.target.value)
     setCounty(e.target.value as string)
   }
 
@@ -86,7 +85,6 @@ const AirQualityIndex = () => {
     const fetchData = async () => {
       await apiAQI()
       .then(res => {
-        console.log(res.data.records)
         setRecords(res.data.records);
       })
       .catch(err => {

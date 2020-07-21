@@ -41,14 +41,12 @@ const AreaIndex = (props: IProps) => {
   const classes = useStyles()
   const [expanded, setExpanded] = useState(false)
   const {data} = props
-  console.log('area index:', data)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
 
   const setStyle = (aqi: any) => {
-    console.log(aqi)
     const aqiIndex = Number(aqi)
     if(aqiIndex < 50){
       return setColor(theme.palette.common.green)
